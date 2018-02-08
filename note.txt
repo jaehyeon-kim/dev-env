@@ -1,0 +1,10 @@
+Open Analytics - Architecture (+ server)
+PyDev w/ Remote System Explorer
+(JS module?)
+Docker w/ SSH
+
+pydev - The repository location of PyDev 5.8.0 is http://dl.bintray.com/fabioz/pydev/5.8.0/ in case you need…
+--> no HTTP
+
+https://www.r-bloggers.com/install-useful-eclipse-plugins-in-bio7-for-r-data-science-and-programming/
+https://sites.google.com/site/programmersnotebook/remote-development-of-python-scripts-on-raspberry-pi-with-eclipse

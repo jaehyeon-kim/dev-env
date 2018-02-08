@@ -1,0 +1,221 @@
+https://github.com/eclipse/che/issues/5325
+
+docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /c/Users/jakim/projects/personal/data:/data eclipse/che:6.0.0 start
+
+docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /c/Users/jakim/projects/personal/data:/data -v /c/Users/jakim/projects/personal/chedir:/chedir eclipse/che:6.0.0 start
+
+docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v C:\kevin\data2:/data -v C:\kevin\data2:/chedir eclipse/che:latest dir up
+
+
+docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock eclipse/che:6.0.0 start
+
+# Start Eclipse Che with user data saved on Windows in c:\tmp
+docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /c/tmp:/data eclipse/che start
+INFO: (che cli): Loading cli...
+INFO: (che cli): Checking registry for version 'nightly' images
+INFO: (che config): Generating che configuration...
+INFO: (che config): Customizing docker-compose for running in a container
+INFO: (che start): Preflight checks
+         port 8080 (http):       [AVAILABLE]
+
+INFO: (che start): Starting containers...
+INFO: (che start): Services booting...
+INFO: (che start): Server logs at "docker logs -f che"
+INFO: (che start): Booted and reachable
+INFO: (che start): Ver: nightly
+INFO: (che start): Use: http://<your-ip>:8080
+INFO: (che start): API: http://<your-ip>:8080/swagger
+
+# Stop Che
+docker run <DOCKER_OPTIONS> eclipse/che stop
+
+# Restart Che
+docker run <DOCKER_OPTIONS> eclipse/che restart
+
+# Run a specific version of Che
+docker run <DOCKER_OPTIONS> eclipse/che:<version> start
+
+# Get help
+docker run eclipse/che
+
+# If boot2docker on Windows, mount a subdir of `%userprofile%` to `:/data`. For example:
+docker run <DOCKER_OPTIONS> -v /c/Users/tyler/che:/data eclipse/che start
+
+# If Che will be accessed from other machines add your server's external IP
+docker run <DOCKER_OPTIONS> -e CHE_HOST=<your-ip> eclipse/che start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WARN: Bound 'eclipse/che' to 'eclipse/che:6.0.0'
+INFO: (che cli): Pulling image alpine:3.4
+INFO: (che cli): Pulling image eclipse/che-ip:6.0.0
+INFO: (che cli): 6.0.0 - using docker 17.06.2-ce / docker4windows
+WARN: Newer version '6.0.0-M4' available
+INFO: (che download): Checking for image 'eclipse/che-init:6.0.0'... not found
+INFO: (che download): Pulling image eclipse/che-init:6.0.0
+
+6.0.0: Pulling from eclipse/che-init
+e110a4a17941: Pull complete
+c6be0cda3022: Pull complete
+b883875a9222: Pull complete
+d7e1053f3043: Pull complete
+7286005afd6b: Pull complete
+69f48606b534: Pull complete
+db978c2912b5: Pull complete
+03b7bfda3245: Pull complete
+722ba45eb664: Pull complete
+68cf6b6b31ad: Pull complete
+0ec8ccf7bcd2: Pull complete
+Digest: sha256:69f324561388cc2309d877cb46d715035730fc202575bf97213ba89a82e3df41
+Status: Downloaded newer image for eclipse/che-init:6.0.0
+
+INFO: (che download): Checking for image 'eclipse/che-server:6.0.0'... not found
+INFO: (che download): Pulling image eclipse/che-server:6.0.0
+
+6.0.0: Pulling from eclipse/che-server
+1160f4abea84: Pull complete
+b1b3e089ad5b: Pull complete
+0e5d0518dcc5: Pull complete
+84b42ec2aeb9: Pull complete
+99c78812345a: Pull complete
+c5efcc838c80: Pull complete
+cbf954246b3d: Pull complete
+a42b5ace8d70: Pull complete
+60622bbeb9e6: Pull complete
+Digest: sha256:ce184581246364c92311e7c6a064a520e59f4abc282ee2e6c12eb2f3e99d6134
+Status: Downloaded newer image for eclipse/che-server:6.0.0
+
+INFO: (che download): Checking for image 'docker/compose:1.10.1'... not found
+INFO: (che download): Pulling image docker/compose:1.10.1
+
+1.10.1: Pulling from docker/compose
+b7f33cc0b48e: Pull complete
+6eee752e5396: Pull complete
+47fa9819d17a: Pull complete
+02a3db631487: Pull complete
+938bc1eb66ad: Pull complete
+5f279040b7cf: Pull complete
+Digest: sha256:6e539fca9f205dc80311260f8cad4397a5d5d0c2ece758792cdbb0ca46432d88
+Status: Downloaded newer image for docker/compose:1.10.1
+
+INFO: (che download): Checking for image 'eclipse/che-action:6.0.0'... not found
+INFO: (che download): Pulling image eclipse/che-action:6.0.0
+
+6.0.0: Pulling from eclipse/che-action
+ab7e51e37a18: Pull complete
+ca5b62f15167: Pull complete
+ef346c9ba9dd: Pull complete
+2f68f171c6b3: Pull complete
+108c87323c31: Pull complete
+c0a9d03203e3: Pull complete
+Digest: sha256:b2458ff277e1fe931205674cbdc8467733d2e3e2b376f33c8efdab23fe846910
+Status: Downloaded newer image for eclipse/che-action:6.0.0
+
+INFO: (che download): Checking for image 'eclipse/che-dir:6.0.0'... not found
+INFO: (che download): Pulling image eclipse/che-dir:6.0.0
+
+6.0.0: Pulling from eclipse/che-dir
+ab7e51e37a18: Already exists
+ca5b62f15167: Already exists
+ef346c9ba9dd: Already exists
+2f68f171c6b3: Already exists
+108c87323c31: Already exists
+c0a9d03203e3: Already exists
+Digest: sha256:a9749a52695a8a4f8285256d20b7b76571304c74421e5bbeccbaf31fcf9457f4
+Status: Downloaded newer image for eclipse/che-dir:6.0.0
+
+INFO: (che download): Checking for image 'eclipse/che-test:6.0.0'... not found
+INFO: (che download): Pulling image eclipse/che-test:6.0.0
+
+6.0.0: Pulling from eclipse/che-test
+ab7e51e37a18: Already exists
+ca5b62f15167: Already exists
+ef346c9ba9dd: Already exists
+2f68f171c6b3: Already exists
+108c87323c31: Already exists
+c0a9d03203e3: Already exists
+Digest: sha256:28664ae7d2a1349d6c67ba0be9956c0e6e981e845c7d8fe644299a1591ff9c0e
+Status: Downloaded newer image for eclipse/che-test:6.0.0
+
+INFO: (che download): Checking for image 'eclipse/che-mount:6.0.0'... not found
+INFO: (che download): Pulling image eclipse/che-mount:6.0.0
+
+6.0.0: Pulling from eclipse/che-mount
+81033e7c1d6a: Already exists
+819573a82165: Pull complete
+db1a2cc1fbd2: Pull complete
+5a40feb3ba77: Pull complete
+Digest: sha256:5ec29a9e8aebedbdbda058931001e205e044a0ad20fa2efe4b440fa3ed0e8174
+Status: Downloaded newer image for eclipse/che-mount:6.0.0
+
+INFO: (che init): Installing configuration and bootstrap variables:
+INFO: (che init):   CHE_HOST=10.0.75.2
+INFO: (che init):   CHE_VERSION=6.0.0
+INFO: (che init):   CHE_CONFIG=/c/Users/jakim/projects/personal
+INFO: (che init):   CHE_INSTANCE=/c/Users/jakim/projects/personal/instance
+INFO: (che config): Generating che configuration...
+INFO: (che config): Customizing docker-compose for running in a container
+INFO: (che start): Preflight checks
+         mem (1.5 GiB):           [OK]
+         disk (100 MB):           [OK]
+         port 8080 (http):        [AVAILABLE]
+         conn (browser => ws):    [OK]
+         conn (server => ws):     [OK]
+
+INFO: (che start): Starting containers...
+INFO: (che start): Services booting...
+INFO: (che start): Server logs at "docker logs -f che"
+INFO: (che start): Booted and reachable
+INFO: (che start): Ver: 6.0.0
+INFO: (che start): Use: http://localhost:8080
+INFO: (che start): API: http://localhost:8080/swagger
+
+########
+INFO: (che cli): 6.0.0 - using docker 17.06.2-ce / docker4windows
+WARN: Newer version '6.0.0-M4' available
+INFO: (che config): Generating che configuration...
+INFO: (che config): Customizing docker-compose for running in a container
+INFO: (che start): Preflight checks
+         mem (1.5 GiB):           [OK]
+         disk (100 MB):           [OK]
+         port 8080 (http):        [AVAILABLE]
+         conn (browser => ws):    [OK]
+         conn (server => ws):     [OK]
+
+INFO: (che start): Starting containers...
+INFO: (che start): Services booting...
+INFO: (che start): Server logs at "docker logs -f che"
+INFO: (che start): Booted and reachable
+INFO: (che start): Ver: 6.0.0
+INFO: (che start): Use: http://localhost:8080
+INFO: (che start): API: http://localhost:8080/swagger
+########
+
+
+--> create stack
+--> create workspace --> open in IDE
+--> create project
+--> create run command
+
+cd ${current.project.path} && source venv/bin/activate && python ${current.project.path}/hello.py
+
+
+c:/Users/jakim/projects/personal/volumns/test

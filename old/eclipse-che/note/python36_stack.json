@@ -1,0 +1,67 @@
+{
+  "name": "Python 3.6",
+  "components": [
+    {
+      "version": "3.6.3",
+      "name": "Python"
+    },
+    {
+      "version": "---",
+      "name": "pip"
+    }
+  ],
+  "tags": [
+    "Python3.6",
+    "pip"
+  ],
+  "id": "stackjejpkwitwp5mxb2d",
+  "workspaceConfig": {
+    "environments": {
+      "default": {
+        "machines": {
+          "dev-machine": {
+            "attributes": {
+              "memoryLimitBytes": "3221225472"
+            },
+            "servers": {
+              "HTTP_8080": {
+                "attributes": {},
+                "port": "8080",
+                "protocol": "http"
+              },
+              "ssh_22": {
+                "port": 22,
+                "protocol": "ssh"
+              }
+            },
+            "volumes": {},
+            "installers": [
+              "org.eclipse.che.exec",
+              "org.eclipse.che.terminal",
+              "org.eclipse.che.ws-agent",
+              "org.eclipse.che.ssh",
+              "org.eclipse.che.git-credentials",
+              "org.eclipse.che.ls.json",
+              "org.eclipse.che.ls.python",
+              "org.eclipse.che.ls.yaml"
+            ],
+            "env": {}
+          }
+        },
+        "recipe": {
+          "type": "compose",
+          "content": "services:\n dev-machine:\n  image: 'jaehyeon/eclipse-che:python3.6'\n",
+          "contentType": "application/x-yaml"
+        }
+      }
+    },
+    "defaultEnv": "default",
+    "projects": [],
+    "name": "default",
+    "commands": [],
+    "links": []
+  },
+  "description": "Python 3.6 Stack",
+  "creator": "che",
+  "scope": "general"
+}
