@@ -1,0 +1,6 @@
+http://tteckie.blogspot.com.au/2014/08/how-to-connecting-to-your-docker.html
+
+
+https://github.com/krlmlr/debian-ssh
+docker build -t=jaehyeon/rocker-ssh:3.4.3 .
+docker run --name ssh -d -p 2222:22 -e SSH_KEY="$(cat ./id_rsa.pub)" jaehyeon/rocker-ssh:3.4.3
