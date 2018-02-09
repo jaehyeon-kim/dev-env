@@ -8,3 +8,6 @@ pydev - The repository location of PyDev 5.8.0 is http://dl.bintray.com/fabioz/p
 
 https://www.r-bloggers.com/install-useful-eclipse-plugins-in-bio7-for-r-data-science-and-programming/
 https://sites.google.com/site/programmersnotebook/remote-development-of-python-scripts-on-raspberry-pi-with-eclipse
+
+Docker SSH Putty
+http://tteckie.blogspot.com.au/2014/08/how-to-connecting-to-your-docker.html
